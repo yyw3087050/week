@@ -26,6 +26,8 @@
           <i>{{item.userName}}</i>
           <b>{{item.meg}}</b>
         </p>
+
+        <p>{{this.$store.state.num}}</p><button @click="incement">+</button>
       </div>
       <div class="slideBottom">
       <el-button type="primary" icon="plus" class="add" v-popover:popover5 @click="tapAdd"></el-button>
@@ -38,6 +40,7 @@
 </template>
 <script>
   import NoInfo from './noinfo.vue'
+  // import {mapMutation} from 'vuex'
   export default {
     data() {
       return {
@@ -66,6 +69,9 @@
             this.messageShow.push(userObj);
             this.message = ''
             console.log(this.messageShow)
+        },
+        incement () {
+            this.$store.commit('INCEMENT_NUM')
         }
 
     },

@@ -1,6 +1,6 @@
 <template>  
   <div class="head">  
-    <p> {{ title }} </p>   
+    <p> {{ this.$store.state.num}} </p>   
   </div>  
 </template>  
   
